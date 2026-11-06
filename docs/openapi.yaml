@@ -37,6 +37,13 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/Task'
+      parameters:
+        - name: completed
+          in: query
+          description: Filter tasks by completion status (true or false)
+          required: false
+          schema:
+            type: boolean
       responses:
         '201':
           description: Task created successfully
